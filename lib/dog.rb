@@ -3,7 +3,7 @@ class Dog
   
   def initialize(attribute_hash, id = nil)
     attribute_hash.each {|key, value| self.send(()"#{key}="), value)}
-    self.id || =nil
+    self.id || = nil
   end
   
   def self.create_table 
@@ -52,7 +52,7 @@ class Dog
       :id => row[0],
       :name => row[1],
       :breed => row[2]
-    }
+      }
     self.new(attribute_hash)
   end
   
