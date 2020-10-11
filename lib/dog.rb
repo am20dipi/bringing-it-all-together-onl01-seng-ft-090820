@@ -3,7 +3,7 @@ class Dog
   
   def initialize(attribute_hash, id = nil)
     attribute_hash.each {|key, value| self.send(()"#{key}="), value)}
-    self.id || = nil
+    self.id = nil
   end
   
   def self.create_table 
