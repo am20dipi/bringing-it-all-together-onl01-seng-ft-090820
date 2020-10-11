@@ -2,9 +2,8 @@ class Dog
   attr_accessor :name, :breed, :id
   
   def initialize(attribute_hash, id = nil)
-    @name = attribute_hash[:name]
-    @breed = attribute_hash[:breed]
-    @id = attribute_hash[:id]
+    attribute_hash.each {|key, value| self.send(()"#{key}="), value)}
+    self.id || =nil
   end
   
   def self.create_table 
@@ -93,7 +92,7 @@ class Dog
     else
       new_dog = self.create({:name => name, :breed => breed})
     end
-    new_dog.id
+    new_dog
   end
   
   def update 
