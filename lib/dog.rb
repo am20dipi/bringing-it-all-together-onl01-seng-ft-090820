@@ -2,7 +2,7 @@ class Dog
   attr_accessor :name, :breed
   attr_reader :id
   
-  def initialize(attribute_hash id=nil)
+  def initialize(attribute_hash, id=nil)
     @name = attribute_hash[:name]
     @breed = attribute_hash[:breed]
     @id = id
