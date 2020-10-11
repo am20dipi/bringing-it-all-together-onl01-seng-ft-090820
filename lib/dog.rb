@@ -93,7 +93,7 @@ class Dog
     else
       new_dog = self.create({:name => name, :breed => breed})
     end
-    new_dog
+    new_dog.id
   end
   
   def update 
