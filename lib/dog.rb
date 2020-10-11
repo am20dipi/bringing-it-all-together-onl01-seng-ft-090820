@@ -2,9 +2,9 @@ class Dog
   attr_accessor :name, :breed
   attr_reader :id
   
-  def initialize(attribute_hash, id=nil)
-    @name = attribute_hash[:name]
-    @breed = attribute_hash[:breed]
+  def initialize(name, breed, id=nil)
+    @name = name
+    @breed = breed
     @id = id
   end
   
@@ -42,8 +42,8 @@ class Dog
     end
   end
   
-  def self.create(attribute_hash)
-    dog = self.new(attribute_hash)
+  def self.create(name:, breed:)
+    dog = self.new(name, breed)
     dog.save
     dog
   end
