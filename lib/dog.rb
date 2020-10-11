@@ -5,7 +5,7 @@ class Dog
   def initialize(attribute_hash, id=nil)
     @name = attribute_hash[:name]
     @breed = attribute_hash[:breed]
-    @id = id
+    @id = attribute_hash[:id]
   end
   
   def self.create_table 
